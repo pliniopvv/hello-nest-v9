@@ -20,7 +20,7 @@ export class ChatComponent implements OnInit {
   ngOnInit(): void {
     this.client = new ClientDTO();
     socket.on('msgToClient', (payload) => {
-      console.log(payload);
+      console.log(payload,socket.id);
       this.receberMensagem(payload);
     });
     this.displayMensagem("Entrou no chat ...");
