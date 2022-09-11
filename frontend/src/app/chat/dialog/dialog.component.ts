@@ -9,33 +9,22 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
 export class DialogComponent implements OnInit {
 
   @Input() client: ClientDTO;
+  @Input() mensagens: string;
   @Output() btnEnviar = new EventEmitter();
-
-  _mensagens: string = "Entrou no chat ...";
-  mensagens: string[] = ["Entrou no chat ..."];
 
   entrada: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
-    this.mensagens = this.client.mensagens;
   }
 
   enviarMensagem() {
-    this.addMensagem(this.entrada);
-    this.entrada = "";
     this.btnEnviar.emit(this.entrada);
-  }
-
-  // FUNÇÕES DE USO INTERNO:
-  addMensagem(msg: string) {
-    this.mensagens.push(msg);
-    this._mensagens = this.mensagens.join("<br>");
+    this.entrada = "";
   }
 
   checkEnter(ev: KeyboardEvent) {
-    // console.log(`Evento:`,ev);
     if (ev.key == 'Enter')
       this.enviarMensagem();
   }

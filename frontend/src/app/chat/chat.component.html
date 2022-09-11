@@ -1,1 +1,5 @@
-<app-dialog [client]="client" (btnEnviar)="msgEnviada($event)"></app-dialog>
+<app-dialog
+[client]="client"
+[mensagens]="mensagens"
+(btnEnviar)="onMsgEnviada($event)"
+></app-dialog>

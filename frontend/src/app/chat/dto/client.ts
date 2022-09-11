@@ -1,4 +1,5 @@
+import { Mensagem } from './mensagem';
 export class ClientDTO {
-  nick: string;
-  mensagens: string[];
+  nick: string = '';
+  mensagens: Mensagem[] = [];
 }

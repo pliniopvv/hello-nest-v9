@@ -36,6 +36,7 @@ npm i -D @types/multer
 <a href="https://www.youtube.com/watch?v=RGmBjliEZZ0&t=1s">Ir para o tutorial</a>
 ```powershell
 npm i --save @nestjs/websockets @nestjs/platform-socket.io
+npm install socket.io socket.io-client @types/socket.io @types/socket.io-client (no frontent)
 ```
 
 ###### v1.1
