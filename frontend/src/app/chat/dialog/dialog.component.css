@@ -1,0 +1,13 @@
+.chat {
+  display: grid;
+  grid-template-rows: 8fr 1fr 1fr;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  height: 100vh;
+  max-height: 100vh;
+}
+.dialog {
+  overflow: scroll;
+  scroll-behavior: smooth;
+}

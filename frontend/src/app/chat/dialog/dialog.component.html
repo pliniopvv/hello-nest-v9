@@ -1,0 +1,6 @@
+<div class="container chat">
+  <div class="dialog" id="mensagens" [innerHTML]="_mensagens">
+  </div>
+  <input type="text" class="form-control" [(ngModel)]="entrada" (keyup)="checkEnter($event)" >
+  <button class="btn btn-primary" (click)="enviarMensagem()">Enviar</button>
+</div>
